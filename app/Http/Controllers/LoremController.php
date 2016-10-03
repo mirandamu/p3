@@ -15,7 +15,7 @@ class LoremController extends Controller
      */
     public function index()
     {
-        //
+        return "You are looking at the LoremController";
     }
 
     /**

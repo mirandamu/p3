@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('lorem-generator', 'LoremController');
+Route::resource('user-generator', 'UserController');

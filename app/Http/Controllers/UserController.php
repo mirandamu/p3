@@ -15,7 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return "You are looking at the UserController";
     }
 
     /**
