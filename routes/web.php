@@ -12,8 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
-Route::resource('lorem-generator', 'LoremController');
-Route::resource('user-generator', 'UserController');
+Route::get('/lorem-generator', 'LoremController@index')->name('lorem.index');
+Route::post('/lorem-generator', 'LoremController@generate')->name('lorem.generate');
+
