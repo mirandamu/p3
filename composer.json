@@ -14,7 +14,7 @@
         "phpunit/phpunit": "~5.0",
         "symfony/css-selector": "3.1.*",
         "symfony/dom-crawler": "3.1.*",
-        "magyarjeti/laravel-lipsum": "2.0",
+        "magyarjeti/laravel-lipsum": "~1.1",
         "barryvdh/laravel-debugbar": "^2.3"
     },
     "autoload": {
