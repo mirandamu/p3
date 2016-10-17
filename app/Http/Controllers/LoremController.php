@@ -17,7 +17,7 @@ class LoremController extends Controller
     {
         $this->validate($request, ['number' => 'bail|required|numeric|min:1|max:30']);
 
-        $generator = new new Badcow\LoremIpsum\Generator();
+        $generator = new Badcow\LoremIpsum\Generator();
         $input = $request->input('number');
         $outputarray = $generator->getParagraphs($input);
         $output = '<p>';
