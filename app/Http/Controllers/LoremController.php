@@ -6,8 +6,6 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use Lorem;
-
 class LoremController extends Controller
 {
     public function index()
@@ -19,7 +17,7 @@ class LoremController extends Controller
     {
         $this->validate($request, ['number' => 'bail|required|numeric|min:1|max:30']);
 
-        $generator = new Lorem;
+        $generator = new new Badcow\LoremIpsum\Generator();
         $input = $request->input('number');
         $outputarray = $generator->getParagraphs($input);
         $output = '<p>';
