@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use Lipsum;
+use Lorem;
 
 class LoremController extends Controller
 {
@@ -19,8 +19,12 @@ class LoremController extends Controller
     {
         $this->validate($request, ['number' => 'bail|required|numeric|min:1|max:30']);
 
+        $generator = new Lorem;
         $input = $request->input('number');
-        $output = Lipsum::medium()->html($input);
+        $outputarray = $generator->getParagraphs($input);
+        $output = '<p>';
+        $output .= implode('</p><p>', $outputarray);
+        $output .= '</p>';
         return view('loremindex', ['pCount' => $input, 'pOutput' => $output]);
     }
 }
