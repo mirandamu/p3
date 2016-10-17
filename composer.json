@@ -7,7 +7,6 @@
     "require": {
         "php": ">=5.6.4",
         "laravel/framework": "5.3.*",
-        "barryvdh/laravel-debugbar": "^2.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -15,7 +14,7 @@
         "phpunit/phpunit": "~5.0",
         "symfony/css-selector": "3.1.*",
         "symfony/dom-crawler": "3.1.*",
-        "magyarjeti/laravel-lipsum": "dev-master",
+        "magyarjeti/laravel-lipsum": "2.0",
         "barryvdh/laravel-debugbar": "^2.3"
     },
     "autoload": {
