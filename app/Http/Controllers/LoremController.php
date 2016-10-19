@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use Badcow;
+
 class LoremController extends Controller
 {
     public function index()
