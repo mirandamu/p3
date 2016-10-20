@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use \RandomUser;
+
 class UserController extends Controller
 {
     /**
@@ -15,7 +17,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return "You are looking at the UserController";
+        //
     }
 
     /**
@@ -25,7 +27,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('usercreate');
     }
 
     /**
@@ -34,9 +36,14 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public static function store(Request $request)
     {
-        //
+        $userInput = $request->input('number');
+        echo $userInput;
+
+        $generateUser = new \RandomUser\Generator();
+        $newUser = $generateUser->getUser();
+        print_r($newUser->firstName);
     }
 
     /**

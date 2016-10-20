@@ -93,7 +93,8 @@ a:hover {
     margin-top: 1rem;
 }
 
-#loremform input[type="text"] {
+#loremform input[type="text"],
+#userform input[type="text"] {
     font-family: Helvetica, Arial, sans-serif;
     margin-left: .5rem;
     border: 1px solid black;
@@ -104,7 +105,8 @@ a:hover {
     text-align: center;
 }
 
-#loremform input[type=submit] {
+#loremform input[type=submit],
+#userform input[type=submit] {
     font-family: Helvetica, Arial, sans-serif;
     margin-top: .25rem;
     padding: .75rem; 
@@ -118,7 +120,9 @@ a:hover {
 }
 
 #loremform input[type=submit]:focus,
-#loremform input[type=submit]:hover {
+#loremform input[type=submit]:hover,
+#userform input[type=submit]:focus,
+#userform input[type=submit]:hover {
     color: #ffc200;
     font-style: italic;
     background-color: #003a75;

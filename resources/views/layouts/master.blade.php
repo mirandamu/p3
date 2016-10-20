@@ -18,6 +18,8 @@
                 <li><a href="/user-generator">User Generator</a></li>
             </ul>
         </nav>
+        <div class="main">
         @yield('content')
+        </div>
     </body>
 </html>
