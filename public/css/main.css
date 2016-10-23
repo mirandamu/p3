@@ -93,6 +93,10 @@ a:hover {
     margin-top: 1rem;
 }
 
+.main ul {
+    margin: 0;
+}
+
 #loremform input[type="text"],
 #userform input[type="text"] {
     font-family: Helvetica, Arial, sans-serif;
@@ -128,7 +132,8 @@ a:hover {
     background-color: #003a75;
 }
 
-#loremoutput {
+#loremoutput,
+.useroutput {
     background-color: #ffe7a0;
 }
 

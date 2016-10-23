@@ -6,16 +6,21 @@ Random User Generator
 
 @section('content')
 <h1>Random User Generator</h1>
-    <p>Generate random users to test your applications with.</p>
+    <p>Specify how many users you need, and our Random User Generator will return a list of names, emails, usernames, and passwords for use in your application.</p>
     <div>
-        <h2>Examples</h2>
-        <p>Hold</p>
+        <h2>Example</h2>
+        <ul>
+            <li>Name: klara kern</li>
+            <li>Email: klara.kern@example.com</li>
+            <li>Username: ticklishbear442</li>
+            <li>Password: kokomo</li>
+        </ul>
     </div>
     <div>
         <h2>Try it Yourself</h2>            
         <form method="POST" action="/user-generator" accept-charset="UTF-8" id="userform">
             {{ csrf_field() }}
-            <label for="number">How many users would you like?</label>
+            <label for="number">How many users would you like? (Max 15)</label>
             <input type="text" name="number" size="5"><br>
             <input type="submit" value="Generate">
         </form>
@@ -26,6 +31,14 @@ Random User Generator
             <li>{{ $error }}</li>
         @endforeach
             </ul>
+        @endif
+    </div>
+    <div>
+        @if(Session::has('userCount'))
+            <h2>{!!Session::get('userCount')!!}</h2>
+        @endif
+        @if(Session::has('userOutput'))
+            {!!Session::get('userOutput')!!}
         @endif
     </div>
 @endsection

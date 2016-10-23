@@ -36,14 +36,40 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public static function store(Request $request)
+    public function store(Request $request)
     {
-        $userInput = $request->input('number');
-        echo $userInput;
+        $this->validate($request, ['number' => 'bail|required|numeric|min:1|max:15']);
 
-        $generateUser = new \RandomUser\Generator();
-        $newUser = $generateUser->getUser();
-        print_r($newUser->firstName);
+        $generator = new \RandomUser\Generator();
+
+        $userCount = $request->input('number');
+        $users = $generator->getUsers($userCount);
+        #echo count($users);
+        #echo '<pre>'; print_r($users); echo '</pre>';
+
+        if ($userCount == 1) {
+            $userCount .= ' Random User';
+        } else {
+            $userCount .= ' Random Users';
+        }
+
+        $userOutputArray = array();
+
+        foreach($users as $user) {
+            array_push($userOutputArray, '<ul class="useroutput">');
+            array_push($userOutputArray, '<li>Name: '.$user->getFirstName().' '.$user->getLastName().'</li>');
+            array_push($userOutputArray, '<li>Email: '.$user->getEmail().'</li>');
+            array_push($userOutputArray, '<li>Username: '.$user->getUsername().'</li>');
+            array_push($userOutputArray, '<li>Password: '.$user->getPassword().'</li>');
+            array_push($userOutputArray, '</ul>');
+        }
+
+        $userOutput = implode("", $userOutputArray);
+
+        \Session::flash('userCount', $userCount);
+        \Session::flash('userOutput', $userOutput);
+
+        return redirect('/user-generator');
     }
 
     /**

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c398b7904df3507bede45180367c09a0",
-    "content-hash": "c6cb9e60657c025c8ddab09530980006",
+    "hash": "fe277388dce1640458516cecc5abb28f",
+    "content-hash": "fd19480fb318e968f6a1d2f4d6363bac",
     "packages": [
         {
             "name": "badcow/lorem-ipsum",
@@ -1188,7 +1188,7 @@
         },
         {
             "name": "randomuser/generator",
-            "version": "v1.0.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/philipwhitt/randomuser-client.git",
@@ -3840,7 +3840,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "badcow/lorem-ipsum": 20
+        "badcow/lorem-ipsum": 20,
+        "randomuser/generator": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
