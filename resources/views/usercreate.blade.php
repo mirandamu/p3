@@ -9,7 +9,7 @@ Random User Generator
     <p>Specify how many users you need, and our Random User Generator will return a list of names, emails, usernames, and passwords for use in your application.</p>
     <div>
         <h2>Example</h2>
-        <ul>
+        <ul id="example">
             <li>Name: klara kern</li>
             <li>Email: klara.kern@example.com</li>
             <li>Username: ticklishbear442</li>
