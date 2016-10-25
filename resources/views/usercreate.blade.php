@@ -21,7 +21,7 @@ Random User Generator
         <form method="POST" action="/user-generator" accept-charset="UTF-8" id="userform">
             {{ csrf_field() }}
             <label for="number">How many users would you like? (Max 15)</label>
-            <input type="text" name="number" size="5"><br>
+            <input type="text" name="number" id="number" size="5"><br>
             <input type="submit" value="Generate">
         </form>
 

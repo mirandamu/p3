@@ -17,7 +17,7 @@ Lorem Ipsum Generator
         <form method="POST" action="/lorem-generator" accept-charset="UTF-8" id="loremform">
             {{ csrf_field() }}
             <label for="number">How many placeholder paragraphs would you like? (Max 8)</label>
-            <input type="text" name="number" size="5"><br>
+            <input type="text" name="number" id="number" size="5"><br>
             <input type="submit" value="Generate">
         </form>
 
