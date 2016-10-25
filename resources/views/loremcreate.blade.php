@@ -13,7 +13,7 @@ Lorem Ipsum Generator
         <p><strong>Two Paragraphs:</strong> &lt;p&gt;Tempor lobortis pretium purus taciti proin velit quam etiam velit consectetur, nulla molestie ad integer et fermentum hendrerit non posuere ullamcorper, faucibus vivamus lacinia tristique commodo magna imperdiet nisi in. Et pellentesque diam torquent platea cursus aptent in posuere sodales pretium bibendum tempor, id sociosqu laoreet phasellus quis porttitor habitasse metus ipsum mollis massa. Inceptos vivamus suscipit nostra feugiat duis nisl arcu orci, integer nostra ac tempus semper lectus condimentum suspendisse, diam aptent lobortis blandit tristique proin quisque. &lt;/p&gt;&lt;p&gt;Commodo conubia aenean eros pharetra curabitur class justo adipiscing, suscipit accumsan erat arcu pretium quisque risus etiam metus, odio sollicitudin vehicula consequat faucibus convallis eu. Facilisis tempor netus ullamcorper quis vel aenean pretium lectus quis nulla lorem mollis, taciti interdum sem congue etiam luctus ipsum suspendisse ullamcorper fusce est.&lt;/p&gt;</p>
     </div>
     <div>
-        <h2>Try it Yourself</h2>            
+        <h2>Try It Yourself</h2>            
         <form method="POST" action="/lorem-generator" accept-charset="UTF-8" id="loremform">
             {{ csrf_field() }}
             <label for="number">How many placeholder paragraphs would you like? (Max 8)</label>

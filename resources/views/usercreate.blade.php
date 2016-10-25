@@ -17,7 +17,7 @@ Random User Generator
         </ul>
     </div>
     <div>
-        <h2>Try it Yourself</h2>            
+        <h2>Try It Yourself</h2>            
         <form method="POST" action="/user-generator" accept-charset="UTF-8" id="userform">
             {{ csrf_field() }}
             <label for="number">How many users would you like? (Max 15)</label>
