@@ -93,6 +93,20 @@ a:hover {
     margin-top: 1rem;
 }
 
+#newyorker {
+    display: block;
+    margin: auto;
+}
+
+#picturesource {
+    margin: 0;
+    text-align: right;
+}
+
+#picturesource a {
+    font-size: .75rem;
+}
+
 #example {
     margin: 0;
 }
